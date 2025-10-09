@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ornella SANGANG - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #38B2AC;
+      --primary-dark: #2C7A7B;
+      --bg-light: #F7FAFC;
+      --bg-dark: #1A202C;
+      --text-light: #4A5568;
+      --text-dark: #E2E8F0;
+    }
+    [data-theme="dark"] {
+      --bg-light: #1A202C;
+      --text-light: #E2E8F0;
+      --bg-dark: #2D3748;
+      --text-dark: #CBD5E0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      margin: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background-color: #2C3E50;
+      color: white;
+      padding: 1.5rem;
+      overflow-y: auto;
+      z-index: 1000;
+      transition: transform 0.3s ease-in-out;
+    }
+    .sidebar a {
+      color: #CBD5E0;
+      text-decoration: none;
+      display: block;
+      padding: 0.75rem 0;
+      transition: color 0.3s, transform 0.2s;
+    }
+    .sidebar a:hover {
+      color: var(--primary);
+      transform: translateX(5px);
+    }
+    .content {
+      margin-left: 220px;
+      padding: 2rem;
+      max-width: 1200px;
+    }
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 1100;
+      cursor: pointer;
+      padding: 0.5rem;
+      background: var(--primary);
+      border-radius: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 3px;
+      background: white;
+      margin: 5px 0;
+      transition: all 0.3s ease-in-out;
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1100;
+      cursor: pointer;
+      padding: 0.5rem;
+      background: var(--primary);
+      border-radius: 50%;
+    }
+    .theme-toggle svg {
+      width: 24px;
+      height: 24px;
+      fill: white;
+    }
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+    h1 {
+      font-size: 2rem;
+      color: var(--primary);
+    }
+    .section {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+    }
+    [data-theme="dark"] .section {
+      background: var(--bg-dark);
+    }
+    .profile-pic {
+      border-radius: 50%;
+      width: 8rem;
+      height: 8rem;
+      object-fit: cover;
+      margin-right: 1rem;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: var(--primary-dark);
+    }
+    @media (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #2C3E50;
+      }
+      .sidebar.active {
+        transform: translateX(0);
+      }
+      .content {
+        margin-left: 0;
+        padding: 1rem;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hamburger" onclick="toggleSidebar()">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
+  </div>
+
+  <div class="sidebar">
+    <h3>Navigation</h3>
+    <a href="#about">À propos</a>
+    <a href="#projects">Projets</a>
+    <a href="#experience">Expérience</a>
+    <a href="#education">Formation</a>
+    <a href="#skills">Compétences</a>
+    <a href="#languages">Langues</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="content">
+    <header class="section">
+      <div style="display: flex; align-items: center;">
+        <img src="profile.jpg" alt="Photo de profil Ornella SANGANG" class="profile-pic" />
+        <div>
+          <h1>Ornella SANGANG</h1>
+          <p>Étudiante ingénieure en Télécommunications & Réseaux – Spécialisation Cybersécurité</p>
+          <p>Email : <a href="mailto:ornellasangang0@gmail.com">ornellasangang0@gmail.com</a></p>
+          <p>
+            <a href="https://www.linkedin.com/in/ornellasangang/" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/OrnellaSangang" target="_blank">GitHub</a>
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="section" id="about">
+      <h2>À propos de moi</h2>
+      <p>
+        Passionnée par la cybersécurité et les réseaux, je développe mes compétences à travers des projets pratiques :
+        CTF, labs IDS/IPS, tests d’intrusion éthique, cryptographie et simulations réseau avec GNS3.
+      </p>
+    </section>
+
+    <section class="section" id="projects">
+      <h2>Projets</h2>
+
+      <h3>CTF Ethical Hacking</h3>
+      <p>
+        Résolution de challenges de pentesting et reverse engineering sur machines VirtualBox.
+        Documentation complète sur les techniques utilisées et solutions.
+        <br />
+        <a href="https://github.com/OrnellaSangang/CTF-Labs" target="_blank">Voir sur GitHub</a>
+      </p>
+
+      <h3>Labs IDS/IPS (Snort, Suricata, Zeek)</h3>
+      <p>
+        Configuration et analyse des alertes réseau. Création de règles personnalisées et analyse de logs sur VM.
+        <br />
+        <a href="https://github.com/OrnellaSangang/IDS-Labs" target="_blank">Voir sur GitHub</a>
+      </p>
+
+      <h3>Projets Réseaux GNS3</h3>
+      <p>
+        Simulation de réseaux complexes avec IPv4/IPv6, routage OSPF/BGP, VPN, et topologies documentées.
+        <br />
+        <a href="https://github.com/OrnellaSangang/GNS3-Networks" target="_blank">Voir sur GitHub</a>
+      </p>
+
+      <h3>Labs Cryptographie SCA</h3>
+      <p>
+        Expérimentation de canaux auxiliaires pour l’extraction d’information et mise en place de contre-mesures sécurisées.
+        <br />
+        <a href="https://github.com/OrnellaSangang/Crypto-SCA" target="_blank">Voir sur GitHub</a>
+      </p>
+    </section>
+
+    <section class="section" id="experience">
+      <h2>Expérience</h2>
+      <h3>Analyste SOC N1 – Stage</h3>
+      <p>Entreprise : MEGA TECH (ESN partenaire d’un grand client)</p>
+      <p>Période : Juin – Août 2025</p>
+      <ul>
+        <li>Surveillance des alertes de sécurité via SIEM (Splunk, QRadar, ELK)</li>
+        <li>Qualification et priorisation des incidents</li>
+        <li>Escalade vers les analystes N2/N3</li>
+        <li>Participation aux réunions de suivi avec le SOC manager</li>
+      </ul>
+    </section>
+
+    <section class="section" id="education">
+      <h2>Formation</h2>
+      <ul>
+        <li>École d’ingénieurs – Spécialisation Télécommunications & Réseaux (Cybersécurité)</li>
+        <li>Mobilité à la NTNU (Norwegian University of Science and Technology) – Labs en cybersécurité</li>
+      </ul>
+    </section>
+
+    <section class="section" id="skills">
+      <h2>Compétences</h2>
+      <ul>
+        <li>Cybersécurité : Pentesting, IDS/IPS, Forensics, SIEM</li>
+        <li>Réseaux : Routage, VPN, VLAN, GNS3, Cisco</li>
+        <li>Outils : Wireshark, Nmap, Snort, Suricata, Zeek, Metasploit, VirtualBox</li>
+        <li>Programmation : Python, Bash, SQL</li>
+      </ul>
+    </section>
+
+    <section class="section" id="languages">
+      <h2>Langues</h2>
+      <ul>
+        <li>Français – Langue maternelle</li>
+        <li>Anglais – Courant</li>
+      </ul>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p>📧 <a href="mailto:ornellasangang0@gmail.com">ornellasangang0@gmail.com</a></p>
+      <p>🔗 <a href="https://www.linkedin.com/in/ornellasangang/" target="_blank">LinkedIn</a> | <a href="https://github.com/OrnellaSangang" target="_blank">GitHub</a></p>
+      <p>© 2025 Ornella SANGANG – Tous droits réservés.</p>
+    </section>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('active');
+      document.querySelector('.hamburger').classList.toggle('active');
+    }
+
+    function toggleTheme() {
+      const body = document.body;
+      const currentTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      body.setAttribute('data-theme', currentTheme);
+      localStorage.setItem('theme', currentTheme);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.body.setAttribute('data-theme', savedTheme);
+    });
+  </script>
+</body>
+</html>
