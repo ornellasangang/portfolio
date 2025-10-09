@@ -25,8 +25,10 @@
       background-color: var(--bg-light);
       color: var(--text-light);
       margin: 0;
+      scroll-behavior: smooth;
       transition: background-color 0.3s, color 0.3s;
     }
+    /* Sidebar */
     .sidebar {
       position: fixed;
       top: 0;
@@ -56,6 +58,7 @@
       padding: 2rem;
       max-width: 1200px;
     }
+    /* Hamburger menu */
     .hamburger {
       display: none;
       position: fixed;
@@ -75,6 +78,7 @@
       margin: 5px 0;
       transition: all 0.3s ease-in-out;
     }
+    /* Theme switch */
     .theme-toggle {
       position: fixed;
       top: 1rem;
@@ -90,6 +94,7 @@
       height: 24px;
       fill: white;
     }
+    /* Content sections */
     h1, h2, h3 {
       font-family: 'Poppins', sans-serif;
     }
@@ -103,6 +108,13 @@
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     [data-theme="dark"] .section {
       background: var(--bg-dark);
@@ -126,9 +138,6 @@
       .sidebar {
         transform: translateX(-100%);
         width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
         background: #2C3E50;
       }
       .sidebar.active {
@@ -144,15 +153,19 @@
     }
   </style>
 </head>
+
 <body>
+  <!-- Hamburger Menu -->
   <div class="hamburger" onclick="toggleSidebar()">
     <span></span><span></span><span></span>
   </div>
 
+  <!-- Theme Toggle -->
   <div class="theme-toggle" onclick="toggleTheme()">
     <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
   </div>
 
+  <!-- Sidebar -->
   <div class="sidebar">
     <h3>Navigation</h3>
     <a href="#about">À propos</a>
@@ -160,14 +173,17 @@
     <a href="#experience">Expérience</a>
     <a href="#education">Formation</a>
     <a href="#skills">Compétences</a>
+    <a href="#strengths">Atouts</a>
+    <a href="#interests">Centres d’intérêt</a>
     <a href="#languages">Langues</a>
     <a href="#contact">Contact</a>
   </div>
 
+  <!-- Main content -->
   <div class="content">
     <header class="section">
       <div style="display: flex; align-items: center;">
-        <img src="profile.jpg" alt="Photo de profil Ornella SANGANG" class="profile-pic" />
+        <img src="profile.jpg" alt="Photo Ornella" class="profile-pic" />
         <div>
           <h1>Ornella SANGANG</h1>
           <p>Étudiante ingénieure en Télécommunications & Réseaux – Spécialisation Cybersécurité</p>
@@ -182,55 +198,31 @@
 
     <section class="section" id="about">
       <h2>À propos de moi</h2>
-      <p>
-        Passionnée par la cybersécurité et les réseaux, je développe mes compétences à travers des projets pratiques :
-        CTF, labs IDS/IPS, tests d’intrusion éthique, cryptographie et simulations réseau avec GNS3.
-      </p>
+      <p>Passionnée par la cybersécurité et les réseaux, je développe mes compétences à travers des projets pratiques : CTF, labs IDS/IPS, tests d’intrusion éthique, cryptographie et simulations réseau avec GNS3.</p>
     </section>
 
     <section class="section" id="projects">
       <h2>Projets</h2>
-
       <h3>CTF Ethical Hacking</h3>
-      <p>
-        Résolution de challenges de pentesting et reverse engineering sur machines VirtualBox.
-        Documentation complète sur les techniques utilisées et solutions.
-        <br />
-        <a href="https://github.com/OrnellaSangang/CTF-Labs" target="_blank">Voir sur GitHub</a>
-      </p>
+      <p>Résolution de challenges de pentesting et reverse engineering sur machines VirtualBox. <br><a href="#">Voir sur GitHub</a></p>
 
       <h3>Labs IDS/IPS (Snort, Suricata, Zeek)</h3>
-      <p>
-        Configuration et analyse des alertes réseau. Création de règles personnalisées et analyse de logs sur VM.
-        <br />
-        <a href="https://github.com/OrnellaSangang/IDS-Labs" target="_blank">Voir sur GitHub</a>
-      </p>
+      <p>Configuration et analyse des alertes réseau. <br><a href="#">Voir sur GitHub</a></p>
 
       <h3>Projets Réseaux GNS3</h3>
-      <p>
-        Simulation de réseaux complexes avec IPv4/IPv6, routage OSPF/BGP, VPN, et topologies documentées.
-        <br />
-        <a href="https://github.com/OrnellaSangang/GNS3-Networks" target="_blank">Voir sur GitHub</a>
-      </p>
+      <p>Simulation de réseaux complexes avec IPv4/IPv6, routage OSPF/BGP, VPN. <br><a href="#">Voir sur GitHub</a></p>
 
       <h3>Labs Cryptographie SCA</h3>
-      <p>
-        Expérimentation de canaux auxiliaires pour l’extraction d’information et mise en place de contre-mesures sécurisées.
-        <br />
-        <a href="https://github.com/OrnellaSangang/Crypto-SCA" target="_blank">Voir sur GitHub</a>
-      </p>
+      <p>Expérimentation de canaux auxiliaires et contre-mesures. <br><a href="#">Voir sur GitHub</a></p>
     </section>
 
     <section class="section" id="experience">
       <h2>Expérience</h2>
       <h3>Analyste SOC N1 – Stage</h3>
-      <p>Entreprise : MEGA TECH (ESN partenaire d’un grand client)</p>
-      <p>Période : Juin – Août 2025</p>
       <ul>
-        <li>Surveillance des alertes de sécurité via SIEM (Splunk, QRadar, ELK)</li>
+        <li>Surveillance des alertes de sécurité via SIEM (Splunk, ELK)</li>
         <li>Qualification et priorisation des incidents</li>
         <li>Escalade vers les analystes N2/N3</li>
-        <li>Participation aux réunions de suivi avec le SOC manager</li>
       </ul>
     </section>
 
@@ -238,7 +230,7 @@
       <h2>Formation</h2>
       <ul>
         <li>École d’ingénieurs – Spécialisation Télécommunications & Réseaux (Cybersécurité)</li>
-        <li>Mobilité à la NTNU (Norwegian University of Science and Technology) – Labs en cybersécurité</li>
+        <li>Mobilité à la NTNU – Labs IDS, Pentesting, Crypto SCA</li>
       </ul>
     </section>
 
@@ -247,8 +239,28 @@
       <ul>
         <li>Cybersécurité : Pentesting, IDS/IPS, Forensics, SIEM</li>
         <li>Réseaux : Routage, VPN, VLAN, GNS3, Cisco</li>
-        <li>Outils : Wireshark, Nmap, Snort, Suricata, Zeek, Metasploit, VirtualBox</li>
-        <li>Programmation : Python, Bash, SQL</li>
+        <li>Outils : Wireshark, Nmap, Snort, Suricata, Zeek, Metasploit</li>
+        <li>Langages : Python, Bash, SQL</li>
+      </ul>
+    </section>
+
+    <!-- Atouts -->
+    <section class="section" id="strengths">
+      <h2>Atouts</h2>
+      <ul>
+        <li>Esprit d'équipe et adaptabilité</li>
+        <li>Organisation & autonomie</li>
+      </ul>
+    </section>
+
+    <!-- Centres d’intérêt -->
+    <section class="section" id="interests">
+      <h2>Centres d’intérêt</h2>
+      <ul>
+        <li>Veille technologique : certifications et formations continues</li>
+        <li>Sport & bien-être : CrossFit</li>
+        <li>Bénévolat : membre de l’association LAFAK</li>
+        <li>Cours particuliers en mathématiques</li>
       </ul>
     </section>
 
@@ -269,22 +281,35 @@
   </div>
 
   <script>
+    // Sidebar toggle
     function toggleSidebar() {
       document.querySelector('.sidebar').classList.toggle('active');
-      document.querySelector('.hamburger').classList.toggle('active');
     }
 
+    // Theme toggle
     function toggleTheme() {
       const body = document.body;
-      const currentTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      body.setAttribute('data-theme', currentTheme);
-      localStorage.setItem('theme', currentTheme);
+      const newTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
     }
 
     document.addEventListener('DOMContentLoaded', () => {
       const savedTheme = localStorage.getItem('theme') || 'light';
       document.body.setAttribute('data-theme', savedTheme);
     });
+
+    // Animation on scroll
+    const sections = document.querySelectorAll('.section');
+    const reveal = () => {
+      const trigger = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < trigger) section.classList.add('visible');
+      });
+    };
+    window.addEventListener('scroll', reveal);
+    reveal();
   </script>
 </body>
 </html>
