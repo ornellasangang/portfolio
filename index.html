@@ -5,240 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ornella SANGANG - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet" />
-<style>
-  :root {
-    --primary: #38B2AC;
-    --primary-dark: #2C7A7B;
-    --bg-light: #F7FAFC;
-    --bg-dark: #1A202C;
-    --text-light: #4A5568;
-    --text-dark: #E2E8F0;
-  }
-
-  [data-theme="dark"] {
-    --bg-light: #1A202C;
-    --text-light: #E2E8F0;
-    --bg-dark: #2D3748;
-    --text-dark: #CBD5E0;
-  }
-
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-light);
-    margin: 0;
-    scroll-behavior: smooth;
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  /* === SIDEBAR === */
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100%;
-    background-color: #2C3E50;
-    color: white;
-    padding: 1.5rem;
-    overflow-y: auto;
-    z-index: 1000;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .sidebar a {
-    color: #CBD5E0;
-    text-decoration: none;
-    display: block;
-    padding: 0.75rem 0;
-    transition: color 0.3s, transform 0.2s;
-  }
-
-  .sidebar a:hover {
-    color: var(--primary);
-    transform: translateX(5px);
-  }
-
-  /* === CONTENT === */
-  .content {
-    margin-left: 220px;
-    padding: 2rem;
-    max-width: 1200px;
-  }
-
-  /* === HAMBURGER === */
-  .hamburger {
-    display: none;
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    z-index: 1100;
-    cursor: pointer;
-    padding: 0.5rem;
-    background: var(--primary);
-    border-radius: 4px;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 24px;
-    height: 3px;
-    background: white;
-    margin: 5px 0;
-    transition: all 0.3s ease-in-out;
-  }
-
-  /* === THEME TOGGLE === */
-  .theme-toggle {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1100;
-    cursor: pointer;
-    padding: 0.5rem;
-    background: var(--primary);
-    border-radius: 50%;
-  }
-
-  .theme-toggle svg {
-    width: 24px;
-    height: 24px;
-    fill: white;
-  }
-
-  /* === TITRES ET SECTIONS === */
-  h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
-  }
-
-  h1 {
-    font-size: 2rem;
-    color: var(--primary);
-  }
-
-  .section {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5rem;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-
-  .section.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  [data-theme="dark"] .section {
-    background: var(--bg-dark);
-  }
-
-  /* === HEADER (PHOTO + INFOS) === */
-  .header-profile {
-    background-color: #0b132b;
-    color: #ffffff;
-    padding: 60px 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    margin-bottom: 40px;
-  }
-
-  .profile-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 40px;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  .profile-pic {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid var(--primary);
-    box-shadow: 0 0 20px rgba(91, 192, 190, 0.6);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .profile-pic:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(91, 192, 190, 0.9);
-  }
-
-  .profile-info {
-    flex: 1;
-    min-width: 250px;
-  }
-
-  .profile-info h1 {
-    font-size: 2.2em;
-    margin-bottom: 10px;
-    color: var(--primary);
-  }
-
-  .profile-info p {
-    font-size: 1em;
-    line-height: 1.6;
-  }
-
-  .profile-info a {
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .profile-info a:hover {
-    text-decoration: underline;
-  }
-
-  /* === LIENS ET INTERACTIONS === */
-  a {
-    color: var(--primary);
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-    color: var(--primary-dark);
-  }
-
-  /* === RESPONSIVE === */
-  @media (max-width: 768px) {
-    .sidebar {
-      transform: translateX(-100%);
-      width: 100%;
-      background: #2C3E50;
-    }
-
-    .sidebar.active {
-      transform: translateX(0);
-    }
-
-    .content {
-      margin-left: 0;
-      padding: 1rem;
-    }
-
-    .hamburger {
-      display: block;
-    }
-
-    .profile-container {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .profile-pic {
-      margin-bottom: 20px;
-    }
-  }
-</style>
+<style> :root { --primary: #38B2AC; --primary-dark: #2C7A7B; --bg-light: #F7FAFC; --bg-dark: #1A202C; --text-light: #4A5568; --text-dark: #E2E8F0; } [data-theme="dark"] { --bg-light: #1A202C; --text-light: #E2E8F0; --bg-dark: #2D3748; --text-dark: #CBD5E0; } body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--text-light); margin: 0; scroll-behavior: smooth; transition: background-color 0.3s, color 0.3s; } /* Sidebar */ .sidebar { position: fixed; top: 0; left: 0; width: 200px; height: 100%; background-color: #2C3E50; color: white; padding: 1.5rem; overflow-y: auto; z-index: 1000; transition: transform 0.3s ease-in-out; } .sidebar a { color: #CBD5E0; text-decoration: none; display: block; padding: 0.75rem 0; transition: color 0.3s, transform 0.2s; } .sidebar a:hover { color: var(--primary); transform: translateX(5px); } .content { margin-left: 220px; padding: 2rem; max-width: 1200px; } /* Hamburger menu */ .hamburger { display: none; position: fixed; top: 1rem; left: 1rem; z-index: 1100; cursor: pointer; padding: 0.5rem; background: var(--primary); border-radius: 4px; } .hamburger span { display: block; width: 24px; height: 3px; background: white; margin: 5px 0; transition: all 0.3s ease-in-out; } /* Theme switch */ .theme-toggle { position: fixed; top: 1rem; right: 1rem; z-index: 1100; cursor: pointer; padding: 0.5rem; background: var(--primary); border-radius: 50%; } .theme-toggle svg { width: 24px; height: 24px; fill: white; } /* Content sections */ h1, h2, h3 { font-family: 'Poppins', sans-serif; } h1 { font-size: 2rem; color: var(--primary); } .section { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-bottom: 1.5rem; opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; } .section.visible { opacity: 1; transform: translateY(0); } [data-theme="dark"] .section { background: var(--bg-dark); } .profile-pic { border-radius: 50%; width: 10rem; height: 10rem; object-fit: cover; margin-right: 1rem; } a { color: var(--primary); text-decoration: none; } a:hover { text-decoration: underline; color: var(--primary-dark); } @media (max-width: 768px) { .sidebar { transform: translateX(-100%); width: 100%; background: #2C3E50; } .sidebar.active { transform: translateX(0); } .content { margin-left: 0; padding: 1rem; } .hamburger { display: block; } } </style>
 
 </head>
 
@@ -267,21 +34,20 @@
     <a href="#contact">Contact</a>
   </div>
 
-<!-- Section Profil -->
-<header class="section header-profile">
-  <div class="profile-container">
-    <img src="profile.jpg" alt="Photo Ornella" class="profile-pic" />
-    <div class="profile-info">
-      <h1>Ornella SANGANG</h1>
-      <p><b>Étudiante ingénieure en Télécommunications & Réseaux – Spécialisation Cybersécurité</b></p>
-      <p>🎯 <b>Objectif :</b> Stage de fin d’études en <b>cybersécurité</b>, idéalement au sein d’un <b>Security Operations Center (SOC)</b>, d’un <b>cabinet de conseil</b> ou d’une <b>équipe de sécurité interne</b>.</p>
-      <p><b>Durée :</b> 6 mois à partir de <b>janvier 2026</b>.</p>
-      <p><b>Email :</b> <a href="mailto:ornellasangang0@gmail.com">ornellasangang0@gmail.com</a></p>
-      <p><b>LinkedIn :</b> <a href="https://www.linkedin.com/in/ornella-sangang-3568ab28b/" target="_blank">Mon profil</a></p>
-      <p><b>Localisation :</b> Île-de-France, France</p>
-    </div>
-  </div>
-</header>
+<!-- Main content --> 
+  <div class="content"> 
+    <header class="section"> 
+      <img src="profile.jpg" alt="Photo Ornella" class="profile-pic" /> 
+      <div style="display: flex; align-items: center;"> 
+        <div> 
+          <h1>Ornella SANGANG</h1>
+          <p><b>Étudiante ingénieure en Télécommunications & Réseaux – Spécialisation Cybersécurité</b></p> 
+          <p>Recherche d'un stage de fin d’études en cybersécurité, idéalement au sein d’un Security Operations Center (SOC), d’un cabinet de conseil, ou d’une équipe de sécurité interne.</p> 
+          <p>Durée : 6 mois à partir de janvier 2026.</p> <p>Email : <a href="mailto:ornellasangang0@gmail.com">ornellasangang0@gmail.com</a></p> 
+          <p><a href="https://www.linkedin.com/in/ornella-sangang-3568ab28b/" target="_blank">LinkedIn</a> </p> <p>Localisation : Ile de France, FRANCE</p> 
+        </div> 
+      </div>
+    </header>
 
 
     <section class="section" id="about">
