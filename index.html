@@ -5,7 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ornella SANGANG - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet" />
-<style> :root { --primary: #38B2AC; --primary-dark: #2C7A7B; --bg-light: #F7FAFC; --bg-dark: #1A202C; --text-light: #4A5568; --text-dark: #E2E8F0; } [data-theme="dark"] { --bg-light: #1A202C; --text-light: #E2E8F0; --bg-dark: #2D3748; --text-dark: #CBD5E0; } body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--text-light); margin: 0; scroll-behavior: smooth; transition: background-color 0.3s, color 0.3s; } /* Sidebar */ .sidebar { position: fixed; top: 0; left: 0; width: 200px; height: 100%; background-color: #2C3E50; color: white; padding: 1.5rem; overflow-y: auto; z-index: 1000; transition: transform 0.3s ease-in-out; } .sidebar a { color: #CBD5E0; text-decoration: none; display: block; padding: 0.75rem 0; transition: color 0.3s, transform 0.2s; } .sidebar a:hover { color: var(--primary); transform: translateX(5px); } .content { margin-left: 220px; padding: 2rem; max-width: 1200px; } /* Hamburger menu */ .hamburger { display: none; position: fixed; top: 1rem; left: 1rem; z-index: 1100; cursor: pointer; padding: 0.5rem; background: var(--primary); border-radius: 4px; } .hamburger span { display: block; width: 24px; height: 3px; background: white; margin: 5px 0; transition: all 0.3s ease-in-out; } /* Theme switch */ .theme-toggle { position: fixed; top: 1rem; right: 1rem; z-index: 1100; cursor: pointer; padding: 0.5rem; background: var(--primary); border-radius: 50%; } .theme-toggle svg { width: 24px; height: 24px; fill: white; } /* Content sections */ h1, h2, h3 { font-family: 'Poppins', sans-serif; } h1 { font-size: 2rem; color: var(--primary); } .section { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-bottom: 1.5rem; opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; } .section.visible { opacity: 1; transform: translateY(0); } [data-theme="dark"] .section { background: var(--bg-dark); } .profile-pic { border-radius: 50%; width: 10rem; height: 10rem; object-fit: cover; margin-right: 1rem; } a { color: var(--primary); text-decoration: none; } a:hover { text-decoration: underline; color: var(--primary-dark); } @media (max-width: 768px) { .sidebar { transform: translateX(-100%); width: 100%; background: #2C3E50; } .sidebar.active { transform: translateX(0); } .content { margin-left: 0; padding: 1rem; } .hamburger { display: block; } } </style>
+<style>
+  :root { 
+    --primary: #38B2AC; 
+    --primary-dark: #2C7A7B; 
+    --bg-light: #F7FAFC; 
+    --bg-dark: #1A202C; 
+    --text-light: #4A5568; 
+    --text-dark: #E2E8F0; } 
+  [data-theme="dark"] { 
+    --bg-light: #1A202C; 
+    --text-light: #E2E8F0; 
+    --bg-dark: #2D3748; 
+    --text-dark: #CBD5E0; } 
+  body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: var(--bg-light); 
+    color: var(--text-light); 
+    margin: 0; 
+    scroll-behavior: smooth; 
+    transition: background-color 0.3s, color 0.3s; } 
+  /* Sidebar */ 
+  .sidebar { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 200px; 
+    height: 100%; 
+    background-color: #2C3E50; 
+    color: white; 
+    padding: 1.5rem; 
+    overflow-y: auto; 
+    z-index: 1000; 
+    transition: transform 0.3s ease-in-out; } 
+  .sidebar a { 
+    color: #CBD5E0; 
+    text-decoration: none; 
+    display: block; padding: 0.75rem 0; 
+    transition: color 0.3s, transform 0.2s; } 
+  .sidebar a:hover { 
+    color: var(--primary); 
+    transform: translateX(5px); } 
+  .content { 
+    margin-left: 220px; 
+    padding: 2rem; 
+    max-width: 1200px; } 
+  /* Hamburger menu */ 
+  .hamburger { 
+    display: none; 
+    position: fixed; 
+    top: 1rem; 
+    left: 1rem; 
+    z-index: 1100; 
+    cursor: pointer; 
+    padding: 0.5rem; 
+    background: var(--primary); 
+    border-radius: 4px; } 
+  .hamburger span { 
+    display: block; 
+    width: 24px; 
+    height: 3px; 
+    background: white; 
+    margin: 5px 0; 
+    transition: all 0.3s ease-in-out; } 
+  /* Theme switch */ 
+  .theme-toggle { 
+    position: fixed; 
+    top: 1rem; 
+    right: 1rem; 
+    z-index: 1100; 
+    cursor: pointer; 
+    padding: 0.5rem; 
+    background: var(--primary); 
+    border-radius: 50%; } 
+  .theme-toggle svg { 
+    width: 24px; 
+    height: 24px; 
+    fill: white; } 
+  /* Content sections */ 
+  h1, h2, h3 { 
+    font-family: 'Poppins', sans-serif; } 
+  h1 { font-size: 2rem; color: var(--primary); } .section { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-bottom: 1.5rem; opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; } .section.visible { opacity: 1; transform: translateY(0); } [data-theme="dark"] .section { background: var(--bg-dark); } .profile-pic { border-radius: 50%; width: 10rem; height: 10rem; object-fit: cover; margin-right: 1rem; } a { color: var(--primary); text-decoration: none; } a:hover { text-decoration: underline; color: var(--primary-dark); } @media (max-width: 768px) { .sidebar { transform: translateX(-100%); width: 100%; background: #2C3E50; } .sidebar.active { transform: translateX(0); } .content { margin-left: 0; padding: 1rem; } .hamburger { display: block; } } </style>
 
 </head>
 
@@ -107,17 +187,17 @@
       </ul>
       <h2>Certifications</h2>
       <ul>
-      <li><strong>Udemy</strong> — <em>Network Security: Mastering Cybersecurity, Ethical Hacking</em> (août 2025)</li>
-      <li><strong>LinkedIn Learning</strong> — <em>Introduction to Offensive Security</em> (juil. 2025)  
-      <li><strong>Cisco Networking Academy</strong> — <em>Endpoint Security</em> (juin 2025)</li>
-      <li><strong>TOEIC Program</strong> — <em>TOEIC Listening and Reading Test</em> (juin 2025 – valide jusqu’en juin 2027)</li>
-      <li><strong>EF SET</strong> — <em>English Certificate 57/100 (B2 Upper Intermediate)</em> (mai 2025)</li>
-      <li><strong>Cisco Networking Academy</strong> — <em>Introduction to Cybersecurity</em> (mai 2025)</li>
-      <li><strong>Cisco Networking Academy</strong> — <em>Network Support and Security</em> (mai 2025)</li>
-      <li><strong>Cisco Networking Academy</strong> — <em>Networking Devices and Initial Configuration</em> (mai 2025)</li>
-      <li><strong>Cisco Networking Academy</strong> — <em>Networking Basics</em> (avr. 2024)  
-      <li><strong>Università per Stranieri di Siena</strong> — <em>CILS Livello DUE – B2</em> (déc. 2022)</li>
-      <li><strong>Università per Stranieri di Perugia</strong> — <em>B2 CELI 3</em> (nov. 2022)</li>
+<ul>
+  <li><strong>Network Security: Mastering Cybersecurity, Ethical Hacking</strong> — Udemy</li>
+  <li><strong>Introduction to Offensive Security</strong> — LinkedIn Learning</li>
+  <li><strong>Endpoint Security</strong> — Cisco Networking Academy</li>
+  <li><strong>TOEIC Listening and Reading Test</strong> — TOEIC Program</li>
+  <li><strong>Introduction to Cybersecurity</strong> — Cisco Networking Academy</li>
+  <li><strong>Network Support and Security</strong> — Cisco Networking Academy</li>
+  <li><strong>Networking Devices and Initial Configuration</strong> — Cisco Networking Academy</li>
+  <li><strong>CILS Livello DUE – B2</strong> — Università per Stranieri di Siena</li>
+  <li><strong>B2 CELI 3</strong> — Università per Stranieri di Perugia</li>
+</ul>
      </ul>
     </section>
 
