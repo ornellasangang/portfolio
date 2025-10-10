@@ -107,6 +107,27 @@
   list-style-type: disc;
   padding-left: 1.5rem;
 }
+
+  /* Ajoutez ces styles à votre bloc <style> ou style.css si ce n'est pas déjà fait */
+.education-entry {
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--primary); /* Ligne de temps visuelle */
+}
+.education-entry h3 {
+  margin-top: 0;
+  color: var(--primary-dark);
+}
+.institution-location {
+  display: block;
+  font-style: italic;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+.education-entry ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
 </style>
 
 </head>
@@ -178,13 +199,13 @@
     <div class="job-entry">
         <h3>Stage de recherche – Évaluation des performances des systèmes sans fil spatio-temporels</h3>
         <p>
-            **De mai 2025 à août 2025**<br>
+            De mai 2025 à août 2025<br>
             <span class="company-location">ETIS UMR 8051 (CY Cergy Paris Université, ENSEA, CNRS) — Cergy, France</span>
         </p>
         <ul>
             <li>Étude et modélisation de systèmes sans fil spatio-temporels (fiabilité, latence, seuils de stabilité).</li>
-            <li>Développement et implémentation d'algorithmes sous **NS-3 (C++)**, **Matlab** et **Python**.</li>
-            <li>Contribution majeure : expériences à double rayon (R1, R2) pour analyser la protection spatiale hétérogène, avec applications potentielles en **sécurité** et **fiabilité des réseaux**.</li>
+            <li>Développement et implémentation d'algorithmes sous NS-3 (C++), Matlab et Python.</li>
+            <li>Contribution majeure : expériences à double rayon (R1, R2) pour analyser la protection spatiale hétérogène, avec applications potentielles en sécurité et fiabilité des réseaux.</li>
         </ul>
     </div>
 
@@ -192,7 +213,7 @@
         <h3>Analyste SOC N1 – Stage</h3>
         <p>
             De juin 2023 à septembre 2023<br>
-            <span class="company-location">MEGATECH — Yaounde, CE, Cameroun</span>
+            <span class="company-location">MEGATECH — Yaounde, Cameroun</span>
         </p>
         <ul>
             <li>Surveillance et analyse en temps réel via SIEM, logs et IDS : détection, qualification et suivi des incidents de sécurité.</li>
@@ -206,26 +227,51 @@
     <div class="job-entry">
         <h3>Assistante technicienne réseau – Stage</h3>
         <p>
-            **D'août 2022 à novembre 2022 (4 mois)**<br>
-            <span class="company-location">INTEL SARL (INTERNATIONAL TELECOMMUNICATION) — Yaoundé, Région du Centre, Cameroun - Sur site</span>
+            D'août 2022 à novembre 2022 (4 mois)<br>
+            <span class="company-location">INTEL SARL (INTERNATIONAL TELECOMMUNICATION) — Yaoundé, Cameroun</span>
         </p>
         <ul>
-            <li>Participation à l'installation de **réseaux locaux (LAN)** chez des clients professionnels : tirage de câbles, configuration de **switches** et **routeurs de base**.</li>
-            <li>Découverte des outils de **diagnostic réseau** (**Wireshark**, **ping**, **traceroute**).</li>
-            <li>Suivi des **tickets clients** et assistance au **support technique de premier niveau**.</li>
-            <li>Rédaction des **rapports d'intervention**.</li>
+            <li>Participation à l'installation de réseaux locaux (LAN) chez des clients professionnels : tirage de câbles, configuration de switches et routeurs de base.</li>
+            <li>Découverte des outils de diagnostic réseau (Wireshark, ping, traceroute).</li>
+            <li>Suivi des tickets clients et assistance au support technique de premier niveau.</li>
+            <li>Rédaction des rapports d'intervention.</li>
         </ul>
     </div>
 
 </section>
 
-    <section class="section" id="education">
-      <h2>Formation</h2>
-      <ul>
-        <li>École d’ingénieurs – Spécialisation Télécommunications & Réseaux (Cybersécurité)</li>
-        <li>Mobilité à la NTNU – Labs IDS, Pentesting, Crypto SCA</li>
-      </ul>
-    </section>
+<section class="section" id="education">
+    <h2>Formation</h2>
+
+    <div class="education-entry">
+        <h3>Diplôme d’Ingénieure en Télécommunications et Réseaux Option CyberSécurité</h3>
+        <p>
+            Depuis 2023<br>
+            <span class="institution-location">Université Sorbonne Paris Nord, Sup'Galilée — Villetaneuse, France</span>
+        </p>
+    </div>
+
+    <div class="education-entry">
+        <h3>Mobilité académique – Master en Cybersécurité</h3>
+        <p>
+            Depuis août 2025<br>
+            <span class="institution-location">Norwegian University of Science and Technology (NTNU) — Trondheim, TR, Norway</span>
+        </p>
+        <ul>
+            <li>Suivi des cours de niveau Master 2 en Cybersécurité</li>
+            <li>Membre du groupe de référence des étudiants</li>
+        </ul>
+    </div>
+
+    <div class="education-entry">
+        <h3>Licence Professionnelle en Sécurité des Réseaux et des Systèmes Informatiques</h3>
+        <p>
+            De 2020 à 2023<br>
+            <span class="institution-location">SUP'PTIC — Yaounde, Cameroon</span><br>
+            Mention : Bien
+        </p>
+    </div>
+</section>
 
     <section class="section" id="skills">
       <h2>Compétences</h2>
