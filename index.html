@@ -85,7 +85,29 @@
   /* Content sections */ 
   h1, h2, h3 { 
     font-family: 'Poppins', sans-serif; } 
-  h1 { font-size: 2rem; color: var(--primary); } .section { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-bottom: 1.5rem; opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; } .section.visible { opacity: 1; transform: translateY(0); } [data-theme="dark"] .section { background: var(--bg-dark); } .profile-pic { border-radius: 50%; width: 10rem; height: 10rem; object-fit: cover; margin-right: 1rem; } a { color: var(--primary); text-decoration: none; } a:hover { text-decoration: underline; color: var(--primary-dark); } @media (max-width: 768px) { .sidebar { transform: translateX(-100%); width: 100%; background: #2C3E50; } .sidebar.active { transform: translateX(0); } .content { margin-left: 0; padding: 1rem; } .hamburger { display: block; } } </style>
+  h1 { font-size: 2rem; color: var(--primary); } .section { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-bottom: 1.5rem; opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; } .section.visible { opacity: 1; transform: translateY(0); } [data-theme="dark"] .section { background: var(--bg-dark); } .profile-pic { border-radius: 50%; width: 10rem; height: 10rem; object-fit: cover; margin-right: 1rem; } a { color: var(--primary); text-decoration: none; } a:hover { text-decoration: underline; color: var(--primary-dark); } @media (max-width: 768px) { .sidebar { transform: translateX(-100%); width: 100%; background: #2C3E50; } .sidebar.active { transform: translateX(0); } .content { margin-left: 0; padding: 1rem; } .hamburger { display: block; } }
+
+  /* Ajoutez ces styles à votre bloc <style> ou style.css */
+.job-entry {
+  margin-bottom: 2rem; /* Espace entre chaque expérience */
+  padding-left: 1rem;
+  border-left: 3px solid var(--primary); /* Ligne de temps visuelle */
+}
+.job-entry h3 {
+  margin-top: 0;
+  color: var(--primary-dark);
+}
+.company-location {
+  display: block;
+  font-style: italic;
+  color: var(--text-light); /* Utilise la couleur de texte normale */
+  margin-bottom: 0.5rem;
+}
+.job-entry ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+</style>
 
 </head>
 
@@ -150,15 +172,52 @@
       <p>Expérimentation de canaux auxiliaires et contre-mesures. <br><a href="#">Voir sur GitHub</a></p>
     </section>
 
-    <section class="section" id="experience">
-      <h2>Expérience</h2>
-      <h3>Analyste SOC N1 – Stage</h3>
-      <ul>
-        <li>Surveillance des alertes de sécurité via SIEM (Splunk, ELK)</li>
-        <li>Qualification et priorisation des incidents</li>
-        <li>Escalade vers les analystes N2/N3</li>
-      </ul>
-    </section>
+<section class="section" id="experience">
+    <h2>Expériences professionnelles</h2>
+
+    <div class="job-entry">
+        <h3>Stage de recherche – Évaluation des performances des systèmes sans fil spatio-temporels</h3>
+        <p>
+            **De mai 2025 à août 2025**<br>
+            <span class="company-location">ETIS UMR 8051 (CY Cergy Paris Université, ENSEA, CNRS) — Cergy, France</span>
+        </p>
+        <ul>
+            <li>Étude et modélisation de systèmes sans fil spatio-temporels (fiabilité, latence, seuils de stabilité).</li>
+            <li>Développement et implémentation d'algorithmes sous **NS-3 (C++)**, **Matlab** et **Python**.</li>
+            <li>Contribution majeure : expériences à double rayon (R1, R2) pour analyser la protection spatiale hétérogène, avec applications potentielles en **sécurité** et **fiabilité des réseaux**.</li>
+        </ul>
+    </div>
+
+    <div class="job-entry">
+        <h3>Analyste SOC N1 – Stage</h3>
+        <p>
+            **De juin 2023 à septembre 2023**<br>
+            <span class="company-location">MEGATECH — Yaounde, CE, Cameroun</span>
+        </p>
+        <ul>
+            <li>**Surveillance et analyse en temps réel** via **SIEM**, **logs** et **IDS** : détection, qualification et suivi des incidents de sécurité.</li>
+            <li>**Triage des alertes** : distinction entre faux positifs et menaces avérées.</li>
+            <li>**Escalade et coordination** avec les niveaux N2/N3 pour les incidents complexes.</li>
+            <li>**Application des procédures standards** (playbooks, runbooks) pour une réponse rapide et homogène.</li>
+            <li>**Reporting et documentation** : rédaction de rapports de sécurité et contribution à l'amélioration des processus.</li>
+        </ul>
+    </div>
+
+    <div class="job-entry">
+        <h3>Assistante technicienne réseau – Stage</h3>
+        <p>
+            **D'août 2022 à novembre 2022 (4 mois)**<br>
+            <span class="company-location">INTEL SARL (INTERNATIONAL TELECOMMUNICATION) — Yaoundé, Région du Centre, Cameroun - Sur site</span>
+        </p>
+        <ul>
+            <li>Participation à l'installation de **réseaux locaux (LAN)** chez des clients professionnels : tirage de câbles, configuration de **switches** et **routeurs de base**.</li>
+            <li>Découverte des outils de **diagnostic réseau** (**Wireshark**, **ping**, **traceroute**).</li>
+            <li>Suivi des **tickets clients** et assistance au **support technique de premier niveau**.</li>
+            <li>Rédaction des **rapports d'intervention**.</li>
+        </ul>
+    </div>
+
+</section>
 
     <section class="section" id="education">
       <h2>Formation</h2>
