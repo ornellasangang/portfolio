@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfert de trafic UDP</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Police moderne */
+            line-height: 1.7;
+            color: #333;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        h1 {
+            color: #ff6600; /* Orange vif pour le protocole UDP */
+            border-bottom: 3px solid #ff6600;
+            padding-bottom: 15px;
+            margin-top: 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #008080; /* Teal/Bleu-vert pour les sections */
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 8px;
+            margin-top: 35px;
+            font-size: 1.8em;
+        }
+        ul {
+            list-style: none; /* Suppression des puces par défaut */
+            margin-left: 0;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+        li::before {
+            content: '•'; /* Utilisation d'un point plus stylisé */
+            color: #ff6600;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            position: absolute;
+            left: 0;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        strong {
+            color: #000080; /* Bleu marine pour l'emphase */
+            font-weight: bold;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            color: #c7254e; /* Rouge foncé pour le code */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Transfert de trafic UDP</h1>
+
+    <section>
+        <h2>Objectif</h2>
+        <p>Concevoir et implémenter un système de redirection et gestion de trafic UDP pour comprendre les contraintes du protocole sans connexion et gérer la fiabilité applicative.</p>
+    </section>
+
+    <section>
+        <h2>Travaux réalisés</h2>
+        <ul>
+            <li>Développement d’un <strong>serveur de redirection UDP</strong> (forwarder) capable de router les messages entre clients.</li>
+            <li>Création d’un <strong>client UDP</strong> simple : envoi et réception de messages.</li>
+            <li>Mise en place d’un mécanisme pour **masquer/adresser** l’origine d’un client (rendre l’adresse inaccessible à l’autre).</li>
+            <li>Implémentation d’un acquittement applicatif : toutes les communications sont confirmées par un message de validation.</li>
+            <li>Gestion robuste des erreurs de connexion et prise en charge des différents cas d’envoi/timeout/retransmission.</li>
+            <li>Tests et capture des échanges réseau avec **Wireshark** pour validation.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Environnement technique</h2>
+        <ul>
+            <li>Langage : C (sockets UDP)</li>
+            <li>Plateforme : Linux (terminal)</li>
+            <li>Outils : <code>Wireshark</code>, <code>Visual Studio Code</code>, outils de débogage réseau</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Compétences développées</h2>
+        <ul>
+            <li>Programmation socket bas niveau (UDP) en C.</li>
+            <li>Conception de protocoles applicatifs (acquittement, gestion d’erreurs).</li>
+            <li>Analyse de trafics réseau et debugging via <code>Wireshark</code>.</li>
+            <li>Notions de multithreading / gestion concurrente (si implémenté) et robustesse réseau.</li>
+        </ul>
+    </section>
+
+</body>
+</html>
