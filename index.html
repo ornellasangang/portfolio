@@ -26,23 +26,29 @@
 [data-theme="dark"] #strengths {
   background-color: #2A3344;
 }
-    [data-theme="dark"] #skills {
-    background: var(--section-dark);
-    /*color: var(--text-dark);*/
-  }
+[data-theme="dark"] #skills {
+  /* Applique le fond sombre */
+  background: var(--section-dark);
+  /* Applique la couleur de texte clair par défaut pour tous les enfants */
+  color: var(--text-dark, #FFFFFF); /* Utilisez la variable ou le fallback #FFFFFF */
+}
 
-   #skills h2{
-    color: #FFFFFF;
-  }
-  
-  #skills h3 {
-    color: var(--primary);
-  }
+/* Le h2 et le p héritent maintenant du 'color' du parent. */
 
-  #skills ul li p {
-    margin-bottom: 0.5rem;
-    color: #FFFFFF;
-  }
+/* Vous n'avez plus besoin de définir la couleur du h2 si elle est blanche:
+#skills h2 { color: #FFFFFF; } */
+
+#skills h3 {
+  /* Le h3 garde sa couleur spécifique, le primaire */
+  color: var(--primary);
+}
+
+#skills ul li p {
+  /* Le h3 garde sa couleur spécifique, mais on garde la marge */
+  margin-bottom: 0.5rem;
+  /* Vous n'avez plus besoin de définir la couleur du p si elle est blanche:
+  color: #FFFFFF; */
+}
 
 
   body { 
