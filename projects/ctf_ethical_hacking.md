@@ -1,17 +1,20 @@
 # CTF Ethical Hacking
 
-**Objectif :** Résoudre des challenges de pentesting et reverse engineering dans un environnement sécurisé.
+## Objectif
+Mettre en pratique les compétences en **pentesting**, **analyse de vulnérabilités** et **reverse engineering** à travers des challenges CTF.
 
-**Technologies / outils utilisés :**  
-- VirtualBox (machines isolées)  
-- Kali Linux  
-- Python, Bash  
-- Wireshark pour l’analyse réseau  
-- Nmap, Metasploit, Burp Suite  
+## Environnement
+- Machines virtuelles sous **VirtualBox**
+- Kali Linux / ParrotOS
+- Outils : `nmap`, `gobuster`, `metasploit`, `hydra`, `Immunity debugger`, `Wireshark`, `Burp Suite`, `Ghidra`, `binwalk`
 
-**Résumé :**  
-- Analyse et exploitation de vulnérabilités simulées  
-- Documentation des étapes et solutions  
-- Lessons learned et recommandations de mitigation  
+## Compétences développées
+- Analyse de services réseau et reconnaissance.
+- Exploitation de vulnérabilités (buffer overflow, injection SQL, LFI/RFI).
+- Escalade de privilèges (Linux & Windows).
+- Automatisation d’attaques via scripts Python/Bash.
 
-**Screenshots / Diagrammes :** 
+## Résultats
+- Résolution de CTF sur **TryHackMe**, **Hack The Box** et challenges internes NTNU.
+- Documentation des techniques utilisées.
+- Amélioration de la vitesse d’identification des vulnérabilités.
