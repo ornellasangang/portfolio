@@ -33,21 +33,25 @@
   color: var(--text-dark, #FFFFFF); /* Utilisez la variable ou le fallback #FFFFFF */
 }
 
-/* Le h2 et le p héritent maintenant du 'color' du parent. */
-
-/* Vous n'avez plus besoin de définir la couleur du h2 si elle est blanche:
-#skills h2 { color: #FFFFFF; } */
-
 #skills h3 {
-  /* Le h3 garde sa couleur spécifique, le primaire */
   color: var(--primary);
 }
 
+#skills h2 {
+  color: #FFFFFF;
+}
+
+#skills p {
+  color: #FFFFFF;
+}
+
+#skills ul li {
+  color: #FFFFFF;
+}
+
 #skills ul li p {
-  /* Le h3 garde sa couleur spécifique, mais on garde la marge */
   margin-bottom: 0.5rem;
-  /* Vous n'avez plus besoin de définir la couleur du p si elle est blanche:
-  color: #FFFFFF; */
+  color: #FFFFFF;
 }
 
 
