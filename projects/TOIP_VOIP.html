@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implémentation de la Téléphonie sur IP (ToIP/VoIP)</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #007bff; /* Bleu vif pour le titre principal */
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #555;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        ul {
+            list-style: disc; /* Puces rondes */
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        strong {
+            color: #dc3545; /* Rouge pour l'accentuation des mots-clés */
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Implémentation de la Téléphonie sur IP (ToIP / VoIP) – Cisco Call Manager & Asterisk</h1>
+
+    <section>
+        <h2>Objectif</h2>
+        <p>Étudier et comparer deux architectures ToIP : une solution <strong>Cisco Call Manager Express (CCME)</strong> et une solution <strong>Asterisk (Trixbox)</strong>. Évaluer les protocoles SIP/RTP et la qualité de service (QoS) en conditions simulées.</p>
+    </section>
+
+    <section>
+        <h2>Travaux réalisés</h2>
+        <ul>
+            <li>Configuration et déploiement d’un <strong>Call Manager Cisco</strong> sur un routeur passerelle.</li>
+            <li>Interconnexion d’un réseau de téléphones IP Cisco et de softphones (<code>PhonerLite</code>).</li>
+            <li>Mise en place d’un <strong>serveur SIP Asterisk (Trixbox)</strong> et configuration des clients.</li>
+            <li>Analyse des échanges SIP et des flux RTP/RTCP avec <strong>Wireshark</strong> (établissement d’appel, négociation codec).</li>
+            <li>Étude de la QoS : métriques de gigue, latence, perte de paquets selon différents codecs (<code>G.711</code>, <code>G.729</code>).</li>
+            <li>Simulation de congestion réseau et évaluation de l’impact sur la qualité audio.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Environnement technique</h2>
+        <ul>
+            <li>Cisco Call Manager Express (CCME)</li>
+            <li>Asterisk (Trixbox)</li>
+            <li>Téléphones IP Cisco, softphones (PhonerLite)</li>
+            <li>Routeurs Cisco, VMware pour VMs, Windows XP en VM (clients/test)</li>
+            <li>Outils : <code>Wireshark</code>, <code>Putty</code>, <code>HyperTerminal</code>, <code>NetMeeting</code></li>
+            <li>Protocoles : <code>SIP</code>, <code>RTP</code>, <code>RTCP</code> ; codecs audio : <code>G.711</code>, <code>G.729</code></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Compétences développées</h2>
+        <ul>
+            <li>Administration et interconnexion d’équipements IP téléphoniques Cisco.</li>
+            <li>Configuration d’un serveur SIP open-source (Asterisk) et gestion des clients SIP.</li>
+            <li>Analyse réseau orientée multimédia (SIP/RTP) et diagnostic de la QoS.</li>
+            <li>Compréhension des contraintes temps réel sur réseaux IP et des stratégies d’optimisation (QoS, priorisation).</li>
+        </ul>
+    </section>
+
+</body>
+</html>
