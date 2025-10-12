@@ -191,11 +191,84 @@
 }
 .btn.ghost { background: transparent; border: 1px solid rgba(255,255,255,0.06); margin-left: 8px; color: var(--accent); }
 
+  /* Section Compétences */
+#skills {
+  background-color: #D9EDF7;
+  border-radius: 10px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#skills h2 {
+  color: #2C3E50;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+#skills h3 {
+  color: #1A5276;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+#skills h4 {
+  color: #2C3E50;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+#skills ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  color: #333;
+}
+
+#skills p {
+  margin: 0.3rem 0 0.5rem 0;
+  color: #333;
+}
+
+.skills-category {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Animation d’apparition */
+.fade-in {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
   
 </style>
 
 </head>
 
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => observer.observe(el));
+});
+</script>
+
+  
 <body>
   <!-- Hamburger Menu -->
   <div class="hamburger" onclick="toggleSidebar()">
