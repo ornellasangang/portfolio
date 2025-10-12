@@ -6,7 +6,7 @@ Mettre en pratique les compétences en **pentesting**, **analyse de vulnérabili
 ## Environnement
 - Machines virtuelles sous **VirtualBox**
 - Kali Linux 
-- Outils : `nmap`, `gobuster`, `metasploit`, `hydra`, `Immunity debugger`, `Wireshark`, `Burp Suite`, `Ghidra`, `binwalk`
+- Outils : `nmap`, `gobuster`, `metasploit`, `hydra`, `Immunity debugger`, `Wireshark`, `Burp Suite`, `Ghidra`
 
 ## Compétences développées
 - Analyse de services réseau et reconnaissance.
