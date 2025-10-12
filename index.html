@@ -26,32 +26,25 @@
 [data-theme="dark"] #strengths {
   background-color: #2A3344;
 }
+
 [data-theme="dark"] #skills {
-  /* Applique le fond sombre */
   background: var(--section-dark);
-  /* Applique la couleur de texte clair par défaut pour tous les enfants */
-  color: var(--text-dark, #FFFFFF); /* Utilisez la variable ou le fallback #FFFFFF */
+  color: #FFFFFF; /* Définit le blanc pour le texte normal (p, ul, li) */
 }
 
-#skills h3 {
-  color: var(--primary);
-}
-
+/* Le h2 hérite du blanc du parent, mais on le spécifie pour la sécurité */
 #skills h2 {
   color: #FFFFFF;
 }
 
-#skills p {
-  color: #FFFFFF;
+/* Surcharge la couleur pour les titres de catégorie (h3) */
+#skills h3 {
+  color: var(--primary);
 }
 
+/* Ajoute la marge uniquement aux éléments de liste (la couleur est héritée) */
 #skills ul li {
-  color: #FFFFFF;
-}
-
-#skills ul li p {
-  margin-bottom: 0.5rem;
-  color: #FFFFFF;
+    margin-bottom: 0.5rem;
 }
 
 
