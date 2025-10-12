@@ -22,12 +22,22 @@
     --bg-dark: #2D3748; 
     --text-dark: #CBD5E0; } 
 
-  [data-theme="dark"] #skills {
-  background-color: #2D3748; /* légèrement plus clair que le fond global */
 }
 [data-theme="dark"] #strengths {
   background-color: #2A3344;
 }
+    [data-theme="dark"] #skills {
+    background: var(--section-dark);
+    color: var(--text-dark);
+  }
+
+  #skills h2, #skills h3 {
+    color: var(--primary);
+  }
+
+  #skills ul li {
+    margin-bottom: 0.5rem;
+  }
 
 
   body { 
