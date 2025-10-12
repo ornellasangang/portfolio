@@ -15,6 +15,6 @@ Mettre en pratique les compétences en **pentesting**, **analyse de vulnérabili
 - Automatisation d’attaques via scripts Python/Bash.
 
 ## Résultats
-- Résolution de CTF sur **TryHackMe**, **Hack The Box** et challenges internes NTNU.
+- Résolution de CTF des challenges internes NTNU.
 - Documentation des techniques utilisées.
 - Amélioration de la vitesse d’identification des vulnérabilités.
