@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labs Cryptographie – Side Channel Analysis (SCA)</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif; /* Police de caractère plus académique */
+            line-height: 1.6;
+            color: #444;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fcfcfc;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+        }
+        h1 {
+            color: #8b0000; /* Rouge foncé pour un sujet "critique" */
+            border-bottom: 3px solid #8b0000;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 2.2em;
+        }
+        h2 {
+            color: #555;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 35px;
+            font-size: 1.6em;
+        }
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        strong {
+            color: #007bff; /* Bleu pour l'emphase */
+            font-weight: bold;
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Consolas', monospace;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Labs Cryptographie – Side Channel Analysis (SCA)</h1>
+
+    <section>
+        <h2>Objectif</h2>
+        <p>Étudier et expérimenter les <strong>attaques par canaux auxiliaires (SCA)</strong> et les contre-mesures associées.</p>
+    </section>
+
+    <section>
+        <h2>Environnement</h2>
+        <ul>
+            <li>Outils : <code>ChipWhisperer</code>, <code>Python</code>, <code>Jupyter Notebook</code></li>
+            <li>Langages : Python, C</li>
+            <li>Scénarios : attaque par consommation d’énergie et corrélation (CPA/DPA)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Compétences développées</h2>
+        <ul>
+            <li>Capture et analyse de traces de puissance.</li>
+            <li>Extraction de clés de chiffrement AES.</li>
+            <li>Implémentation de contre-mesures logicielles (masquage, random delay).</li>
+            <li>Interprétation de résultats statistiques (corrélations, pics d’énergie).</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Résultats</h2>
+        <ul>
+            <li>Réalisation de plusieurs expériences de SCA.</li>
+            <li>Validation expérimentale d’attaques CPA sur AES.</li>
+            <li>Développement d’un rapport technique illustré.</li>
+        </ul>
+    </section>
+
+</body>
+</html>
